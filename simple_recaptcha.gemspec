@@ -4,7 +4,7 @@ require File.expand_path('../lib/simple_recaptcha/version', __FILE__)
 Gem::Specification.new do |gem|
   gem.authors       = ["Wojciech Wnętrzak"]
   gem.email         = ["w.wnetrzak@gmail.com"]
-  gem.description   = %q{Google reCAPTCHA library}
+  gem.description   = %q{Simple Google reCAPTCHA library}
   gem.summary       = %q{Google reCAPTCHA library}
   gem.homepage      = ""
 
