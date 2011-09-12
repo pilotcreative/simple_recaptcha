@@ -42,6 +42,18 @@ describe SimpleRecaptcha::Client do
     assert !recaptcha.valid?
   end
 
+  it "should use module private key when not set on initialization" do
+    SimpleRecaptcha.private_key = "moduleprivate"
+    recaptcha = SimpleRecaptcha::Client.new
+    assert_equal "moduleprivate", recaptcha.private_key
+  end
+
+  it "should overwrite module private key on initialization" do
+    SimpleRecaptcha.private_key = "moduleprivate"
+    recaptcha = SimpleRecaptcha::Client.new(:private_key => "instanceprivate")
+    assert_equal "instanceprivate", recaptcha.private_key
+  end
+
   it "should return true if verified" do
     recaptcha = SimpleRecaptcha::Client.new(@attributes)
     http = mock("Net::HTTPOK")

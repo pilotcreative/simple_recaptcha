@@ -1,5 +1,3 @@
-require "net/http"
-
 require "simple_recaptcha/version"
 require "simple_recaptcha/client"
 

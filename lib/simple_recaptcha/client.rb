@@ -1,3 +1,5 @@
+require "net/http"
+
 class SimpleRecaptcha::Client
   attr_accessor :ip, :challenge, :response
   attr_writer :private_key
