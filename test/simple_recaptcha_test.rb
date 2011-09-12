@@ -19,4 +19,13 @@ describe SimpleRecaptcha do
     SimpleRecaptcha.public_key.must_equal "publicviablock"
     SimpleRecaptcha.private_key.must_equal "privateviablock"
   end
+
+  it "should be possible to call client on module level" do
+    SimpleRecaptcha.client.must_be_kind_of SimpleRecaptcha::Client
+  end
+
+  it "should be possible to verify on module level" do
+    mock_http("true\n")
+    SimpleRecaptcha.verify(:ip => "127.0.0.1", :challenge => "challenge", :response => "response", :private_key => "privatekey").must_equal true
+  end
 end

@@ -7,8 +7,7 @@ Ruby library for [reCAPTCHA](http://www.google.com/recaptcha)
 ```ruby
 require "simple_recaptcha"
 
-recaptcha = SimpleRecaptcha::Client.new
-recaptcha.verify(:private_key => "your-private-key", :ip => "127.0.0.1", :challenge => "challengestring", :response => "user input")
+SimpleRecaptcha.verify(:private_key => "your-private-key", :ip => "127.0.0.1", :challenge => "challengestring", :response => "user input")
 ```
 
 All 4 attributes must be specified: `:private_key`, `:ip`, `:challenge`, `:response`
