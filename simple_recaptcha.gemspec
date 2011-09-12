@@ -6,7 +6,7 @@ Gem::Specification.new do |gem|
   gem.email         = ["w.wnetrzak@gmail.com"]
   gem.description   = %q{Simple Google reCAPTCHA library}
   gem.summary       = %q{Google reCAPTCHA library}
-  gem.homepage      = ""
+  gem.homepage      = "https://github.com/objectreload/simple_recaptcha"
 
   gem.executables   = `git ls-files -- bin/*`.split("\n").map{ |f| File.basename(f) }
   gem.files         = `git ls-files`.split("\n")
